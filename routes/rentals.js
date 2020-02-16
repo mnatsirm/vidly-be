@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
             dailyRentalRate: movie.dailyRentalRate
         }
     });
-
+    
     try {
         new Fawn.Task()
             .save('rentals', rental)
@@ -71,4 +71,4 @@ router.post('/', async (req, res) => {
     }
 });
 
-module.exports.router = router;
+module.exports = router;
